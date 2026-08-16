@@ -9,4 +9,10 @@ class PostDB(Base):
     title = Column(String)
     content = Column(String)
 
-    
+class UserDB(Base):
+    __tablename__ = "users"
+
+    id = Column(Integer, primary_key=True)
+    username = Column(String, unique=True)
+    email = Column(String, unique=True)
+    password = Column(String)
